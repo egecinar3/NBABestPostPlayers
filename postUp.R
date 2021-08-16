@@ -31,7 +31,7 @@ df$PPP <- as.numeric(as.character(df$PPP))
 df$POSS <- as.numeric(as.character(df$POSS))
 df$PLAYER_NAME <- as.character(df$PLAYER_NAME)
 df %>%
-  filter(POSS>=2.5, PPP>=0.6) %>%
+  filter(POSS>=2.5, PPP>=0.6, GP>=30) %>%
   ggplot(aes(x = POSS, y = PPP, color = POSS*PPP, size = POSS*PPP)) +
   xlim(c(2,10))+
   xlab("# of Post Up Possessions") +
